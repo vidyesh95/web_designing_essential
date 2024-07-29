@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Create a login page -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <meta name="description" content="Sign in form.">
+    <meta property="og:title" content="Sign in form">
+    <meta property="og:type" content="website">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .image-section {
+            height: 100vh;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .login-section {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .image-wrapper::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%);
+        }
+
+        .side-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .heading-on-image {
+            width: 623px;
+            top: 56px;
+            position: absolute;
+            text-align: center;
+            color: white;
+            font-size: 96px;
+            font-family: Noto Serif,sans-serif;
+            font-weight: 500;
+            line-height: 88px;
+            word-wrap: break-word
+        }
+
+        .sub-heading-on-image {
+            width: 573px;
+
+            bottom: 56px;
+            position: absolute;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 14px;
+            font-family: Inter,sans-serif;
+            font-weight: 400;
+            line-height: 20px;
+            word-wrap: break-word
+        }
+
+        .content {
+            padding: 108px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            display: flex;
+        }
+
+        .login-heading-text-container {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+            display: flex
+        }
+
+        .heading-login {
+            text-align: center;
+            color: #121212;
+            font-size: 48px;
+            font-family: Noto Serif,sans-serif;
+            font-weight: 600;
+            line-height: 64px;
+            word-wrap: break-word
+        }
+
+        .text {
+            text-align: center;
+            color: #3D3D3D;
+            font-size: 14px;
+            font-family: Inter,sans-serif;
+            font-weight: 400;
+            line-height: 20px;
+            word-wrap: break-word
+        }
+
+        .input-field {
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 8px;
+            display: flex
+        }
+
+        .label {
+            text-align: center;
+            color: #121212;
+            font-size: 14px;
+            font-family: Inter,sans-serif;
+            font-weight: 500;
+            line-height: 20px;
+            word-wrap: break-word
+        }
+
+        .input {
+            width: 288px;
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            background: white;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px #EDEDED solid;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            display: inline-flex
+        }
+
+        .input-container {
+            align-self: stretch;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 24px;
+            display: flex;
+            position: relative
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 20;
+            position: absolute;
+            right: 16px;
+            cursor: pointer;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        .password-box {
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 8px;
+            display: flex
+        }
+
+        .login-gap {
+            flex-direction: column;
+            gap: 56px;
+            display: flex;
+        }
+
+        .checkbox-container {
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 4px;
+            -webkit-user-select: none;
+            user-select: none;
+            display: flex;
+        }
+
+        .forgot-password-container {
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 8px;
+            display: flex
+        }
+
+        .remember-me-and-forgot-pass-container {
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            display: flex
+        }
+
+        .password-container {
+            align-self: stretch;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 12px;
+            display: flex
+        }
+
+        .sign-in-and-sign-up-container {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            display: flex
+        }
+
+        .button {
+            align-self: stretch;
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            background: #121212;
+            border-radius: 4px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            display: inline-flex;
+            cursor: pointer
+        }
+
+        .button-text {
+            color: white;
+            font-size: 14px;
+            font-family: Inter;
+            font-weight: 600;
+            line-height: 24px;
+            word-wrap: break-word
+        }
+    </style>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <section class="image-section">
+        <div class="image-wrapper">
+            <img src="https://images.unsplash.com/photo-1613407794004-4d11e034e136?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Nature image" class="side-image" />
+            <div class="heading-on-image">Sign in to your account</div>
+            <div class="sub-heading-on-image">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolor quo
+                sit aspernatur est aliquam nisi nesciunt corporis omnis pariatur harum velit ea similique consequuntur
+                atque nam totam, provident labore.
+            </div>
+        </div>
+    </section>
+    <section class="login-section">
+        <div class="content">
+            <div class="login-gap">
+                <div class="login-heading-text-container">
+                    <div class="heading-login">Welcome Back</div>
+                    <div class="text">Enter your email and password to access your account</div>
+                </div>
+                <div class="input-container">
+                    <div class="input-field">
+                        <label for="email-1" class="label">Email</label>
+                        <input type="email" name="email" id="email-1" placeholder="Enter your email" class="input" />
+                    </div>
+
+                    <div class="password-container">
+                        <div class="input-field">
+                            <label for="password-2" class="label">Password</label>
+                            <div class="password-box">
+                                <span class="material-symbols-outlined">
+                                    visibility
+                                </span>
+                                <input type="password" name="password" id="password-2"
+                                    placeholder=" Enter your password" class="input" />
+                            </div>
+                        </div>
+
+                        <div class="remember-me-and-forgot-pass-container">
+                            <div class="checkbox-container">
+                                <input type="checkbox" name="remember-me" id="remember-me" />
+                                <label for="remember-me" class="label">Remember me</label>
+                            </div>
+
+                            <div class="forgot-password-container">
+                                <span class="text">
+                                    Forgot password?
+                                    <a href="http://" target="_blank" rel="noopener noreferrer" class="label">
+                                        Change now
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sign-in-and-sign-up-container">
+                    <button type="button" class="button">
+                        <span class="button-text">Sign in</span>
+                    </button>
+                    <div class="text">
+                        Don't have an account?
+                        <a href="http://" target="_blank" rel="noopener noreferrer" class="label">
+                            Sign up
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

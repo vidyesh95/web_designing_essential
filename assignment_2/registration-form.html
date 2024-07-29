@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Create registration form -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <meta name="description" content="Sign up for our service using this simple registration form.">
+    <meta property="og:title" content="Registration Form">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+    <form action="/submit-form" method="post">
+        <table border="1">
+            <!-- Thead for heading Registration Form -->
+            <thead>
+                <tr>
+                    <th colspan="2">
+                        <center>Registration Form</center>
+                    </th>
+                </tr>
+            </thead>
+
+            <!-- Tbody for form elements -->
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="student-name-1">Student Name</label>
+                    </td>
+                    <td>
+                        <input type="text" name="student-name" id="student-name-1" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="father-name-2">Father's Name</label>
+                    </td>
+                    <td><input type="text" name="fathers-name" id="father-name-2">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="mother-name-3">Mother's Name</label>
+                    </td>
+                    <td><input type="text" name="mothers-name" id="mother-name-3">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="date-of-birth-4">Date of Birth</label></td>
+                    <td><input type="date" name="date-of-birth" id="date-of-birth-4"></td>
+                </tr>
+                <tr>
+                    <td><label>Gender</label></td>
+                    <td>
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="male" value="male">
+                        <label for="female">Female</label>
+                        <input type="radio" name="gender" id="female" value="female">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email-6">Email</label>
+                    </td>
+                    <td><input type="email" name="email" id="email-6"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="mobile-number-7">Mobile No.</label>
+                    </td>
+                    <td>
+                        <input type="tel" name="mobile-number" id="mobile-number-7" minlength="3" maxlength="14"
+                            pattern="[0-9]{10}">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="address-8">Address</label>
+                    </td>
+                    <td>
+                        <textarea name="address" id="address-8" cols="16" rows="3"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="state-9">State</label>
+                    </td>
+                    <td>
+                        <input type="text" name="state" id="state-9">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="city-10">City</label>
+                    </td>
+                    <td>
+                        <input type="text" name="city" id="city-10">
+                    </td>
+                </tr>
+            </tbody>
+
+            <!-- Tfoot for submit button -->
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Submit"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+</body>
+
+</html>

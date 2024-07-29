@@ -1,0 +1,251 @@
+<!-- Create a form for processing orders for boxes. The order form is for a company called 'Land of Boxes'.
+Their product line consists of only five items:
+
+1. The EconoBox: Cost R5
+
+2. The Standard Box: Cost R10
+
+3. The Premium Box: Cost R15
+
+4. The Deluxe Box: Cost R20
+
+5. The Super Deluxe Box: Cost R30
+
+The order form should include the following elements:
+
+1. Contact details of the purchaser, including name, address, telephone number and email.
+
+2. Product details including price, product name, product number and product quantity.
+
+3. Method of payment including credit card type, card number and expiry date.
+
+4. Billing address and delivery address if they are different.
+
+5.  You will need to use tables and CSS styles to achieve this layout. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Land of Boxes</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1 class="green text-logo">Land of Boxes</h1>
+        </nav>
+        <hr class="divider">
+    </header>
+
+    <main>
+        <section id="hero">
+            <div id="hero-text-container">
+                <h1 class="green text-heading">
+                    Order boxes online from assorted varieties<span class="orange">.</span>
+                </h1>
+                <p class="text-color text-description">High quality boxes are available at just MOQ of one.</p>
+            </div>
+
+            <img id="hero-image" src="assets/hero_image.png" alt="Boxes image">
+        </section>
+
+        <section id="explore" class="green">
+            <img id="explore-image" src="assets/explore_image.png" alt="Explore image">
+            <div id="explore-text-container">
+                <h1 class="green text-heading">Explore our craftsmanship<span class="orange">.</span></h1>
+                <p class="text-color text-description">
+                    Boxes manufactured at our plant have to pass rigorous quality checks and are tested for
+                    contaminants.
+                </p>
+            </div>
+        </section>
+
+        <section id="order-container">
+            <div class="image-box">
+                <img class="order-from-us-image" src="assets/img_06.png" alt="Order from us image">
+                <h1 id="order-from-us-now-text" class="white text-heading">Order from us now!</h1>
+            </div>
+            <div id="product-container">
+                <div class="product-item-container">
+                    <img src="assets/img_05.png" alt="The Econo Box Image" class="product-catalog-image">
+                    <h1 class="black text-label">The Econo Box</h1>
+                    <p class="text-color text-description">R5</p>
+                </div>
+                <div class="product-item-container">
+                    <img src="assets/img_04.png" alt="The Standard Box Image" class="product-catalog-image">
+                    <h1 class="black text-label">The Standard Box</h1>
+                    <p class="text-color text-description">R10</p>
+                </div>
+                <div class="product-item-container">
+                    <img src="assets/img_03.png" alt="The Premium Box Image" class="product-catalog-image">
+                    <h1 class="black text-label">The Premium Box</h1>
+                    <p class="text-color text-description">R15</p>
+                </div>
+                <div class="product-item-container">
+                    <img src="assets/img_02.png" alt="The Deluxe Box Image" class="product-catalog-image">
+                    <h1 class="black text-label">The Deluxe Box</h1>
+                    <p class="text-color text-description">R20</p>
+                </div>
+                <div class="product-item-container">
+                    <img src="assets/img_01.png" alt="The Super Deluxe Box Image" class="product-catalog-image">
+                    <h1 class="black text-label">The Super Deluxe Box</h1>
+                    <p class="text-color text-description">R30</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="form-container">
+            <form action="#" method="post">
+                <h1 class="green text-heading">Order form</h1>
+
+                <div id="form-body-container">
+                    <div class="form-block-container">
+                        <h3 class="black text-label margin-eight">Contact Details</h3>
+                        <div class="container-bg-color-gray form-item-container">
+                            <label class="text-color text-description form-item-label" for="name">Name:</label>
+                            <input class="text-color text-description form-item-input" type="text" id="name"
+                                name="name">
+                        </div>
+                        <div class="container-bg-color-white form-item-container">
+                            <label class="text-color text-description form-item-label" for="address">Address:</label>
+                            <input class="text-color text-description form-item-input" type="text" id="address"
+                                name="address">
+                        </div>
+                        <div class="container-bg-color-gray form-item-container">
+                            <label class="text-color text-description form-item-label" for="telephone">Telephone
+                                Number:</label>
+                            <input class="text-color text-description form-item-input" type="tel" id="telephone"
+                                name="telephone">
+                        </div>
+                        <div class="container-bg-color-white form-item-container">
+                            <label class="text-color text-description form-item-label" for="email">Email:</label>
+                            <input class="text-color text-description form-item-input" type="email" id="email"
+                                name="email">
+                        </div>
+                    </div>
+
+                    <div class="form-block-container">
+                        <h3 class="black text-label margin-eight">Product Details</h3>
+                        <div class="container-bg-color-gray form-item-container">
+                            <label class="text-color text-description form-item-label" for="product-name">Product
+                                Name:</label>
+                            <input class="text-color text-description form-item-input" type="text" id="product-name"
+                                name="product_name">
+                        </div>
+                        <div class="container-bg-color-white form-item-container">
+                            <label class="text-color text-description form-item-label" for="product-number">Product
+                                Number:</label>
+                            <input class="text-color text-description form-item-input" type="text" id="product-number"
+                                name="product_number">
+                        </div>
+                        <div class="container-bg-color-gray form-item-container">
+                            <label class="text-color text-description form-item-label" for="product-quantity">Product
+                                Quantity:</label>
+                            <input class="text-color text-description form-item-input" type="number"
+                                id="product-quantity" name="product_quantity">
+                        </div>
+                    </div>
+
+                    <div class="form-block-container">
+                        <h3 class="black text-label margin-eight">Method of Payment</h3>
+                        <div class="container-bg-color-gray form-item-container">
+                            <label class="text-color text-description form-item-label" for="credit-card-type">Credit
+                                Card
+                                Type:</label>
+                            <input class="text-color text-description form-item-input" type="text" id="credit-card-type"
+                                name="credit_card_type">
+                        </div>
+                        <div class="container-bg-color-white form-item-container">
+                            <label class="text-color text-description form-item-label" for="card-number">Card
+                                Number:</label>
+                            <input class="text-color text-description form-item-input" type="number" id="card-number"
+                                name="card_number">
+                        </div>
+                        <div class="container-bg-color-gray form-item-container">
+                            <label class="text-color text-description form-item-label" for="expiry-date">Expiry
+                                Date:</label>
+                            <input class="text-color text-description form-item-input" type="date" id="expiry-date"
+                                name="expiry_date">
+                        </div>
+                    </div>
+
+                    <div class="form-block-container">
+                        <h3 class="black text-label margin-eight">Billing and Delivery Address</h3>
+                        <div class="container-bg-color-gray form-item-container">
+                            <label class="text-color text-description form-item-label" for="billing-address">Billing
+                                Address:</label>
+                            <input class="text-color text-description form-item-input" type="text" id="billing-address"
+                                name="billing_address">
+                        </div>
+                        <div class="container-bg-color-white form-item-container">
+                            <label class="text-color text-description form-item-label" for="delivery-address">Delivery
+                                Address:</label>
+                            <input class="text-color text-description form-item-input" type="text" id="delivery-address"
+                                name="delivery_address">
+                        </div>
+                    </div>
+                </div>
+
+                <input class="text-description" type="submit" value="Submit Order">
+            </form>
+        </section>
+    </main>
+
+    <footer class="container-padding-regular">
+        <div class="footer-main">
+            <div class="footer-left">
+                <dl>
+                    <dt><b class="green text-logo">Land of Boxes</b></dt>
+
+                    <dd class="margin-zero text-color-footer-light text-description">
+                        Land of Boxes is an innovative startup aimed at bridging the supply chain innovations gap.
+                        We create all sorts of customized boxes to enhance the value proposition of you product.
+                    </dd>
+                </dl>
+            </div>
+            <div class="footer-right">
+                <dl>
+                    <dt class="white text-description"><b>Quick Links</b></dt>
+
+                    <dd class="margin-zero text-color-footer-light text-description">Catalog</dd>
+                    <dd class="margin-zero text-color-footer-light text-description">Order Form</dd>
+                    <dd class="margin-zero text-color-footer-light text-description">Returns</dd>
+                </dl>
+
+                <dl>
+                    <dt class="white text-description"><b>About</b></dt>
+
+                    <dd class="margin-zero text-color-footer-light text-description">About Us</dd>
+                    <dd class="margin-zero text-color-footer-light text-description">Contact</dd>
+                    <dd class="margin-zero text-color-footer-light text-description">Certifications</dd>
+                </dl>
+
+                <dl>
+                    <dt class="white text-description"><b>Social Media</b></dt>
+
+                    <dd class="margin-zero text-color-footer-light text-description">Youtube</dd>
+                    <dd class="margin-zero text-color-footer-light text-description">X</dd>
+                    <dd class="margin-zero text-color-footer-light text-description">Instagram</dd>
+                </dl>
+            </div>
+        </div>
+        <p class="text-color-footer-light copyright-text text-center">© 2024 Land of Boxes</p>
+    </footer>
+</body>
+
+</html>

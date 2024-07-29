@@ -256,8 +256,12 @@ The order form should include the following elements:
 
         // Your web app's Firebase configuration
         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        require('dotenv').config();
+        const fireApiKey = process.env.FIREBASE_API_KEY;
+        console.log(fireApiKey);
         const firebaseConfig = {
-            apiKey: "AIzaSyB-g68r6KjO-NQFuil25m6xqzenzTdT8Ds",
+            // apiKey: fireApiKey,
+            apiKey: AIzaSyB-g68r6KjO-NQFuil25m6xqzenzTdT8Ds,
             authDomain: "land-of-boxes.firebaseapp.com",
             projectId: "land-of-boxes",
             storageBucket: "land-of-boxes.appspot.com",
